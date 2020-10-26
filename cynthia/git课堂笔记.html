@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    学习链接：
+    https://www.liaoxuefeng.com/wiki/896043488029600
+
+    https://www.runoob.com/git/git-workflow.html
+
+    1. 查看git配置信息：
+    git config --list
+    2.配置个人的用户名和邮箱
+    git config --global user.name "wuhaijun"
+    git config --global user.email 743532194@qq.com
+
+    3. 生成ssh
+    ssh-keygen -t rsa -C "743532194@qq.com"
+    找到.ssh文件目录下的 id_rsa.pub
+    将id_rsa.pub里的内容复制到 ssh公钥里
+	
+	测试ssh有没有配置成功
+	ssh -T git@github.com
+	ssh -T git@gitee.com
+	
+
+    4.如何复制别人的仓库
+    git clone git@gitee.com:haijunwu/p2_2005_test02.git(提示说明：这个换成自己要复制的链接)
+
+    git status 查看仓库的状态和变化
+
+    git add . 添加所有文件
+
+    git commit -m "对于本次提交的说明"
+
+    git pull origin master 更新代码是最新的和远程仓库
+
+    git push origin master 提交代码到远程仓库master
+
+    5.退出vim 编辑模式
+    按住 shift+; 键名
+    输入q
+    git pull origin master
+    git push origin master
+	
+	
+	回退版本
+	git如何退回到某个版本
+	git log 查看提交历史
+	
+	commit 后面那一长串就是版本号，
+	git reset --hard 版本号
+	git push -f  origin master
+
+	
+	
+	
+	
+	分支管理
+		1.5.1 git branch dev	创建分支
+			  git checkout dev  切换到分支 或者 git switch dev
+			  git checkout -b dev 创建并切换到分支 或 git switch -c dev
+		1.5.2 git merge dev 把dev分支的工作成果合并到master分支上
+		1.5.3 git branch -d dev 删除分支dev  git branch -D dev 强行删除dev
+		1.5.4 git branch 查看分支
+		
+	
+
+
+
+
+
+
+
+
+</body>
+
+</html>
